@@ -1,13 +1,104 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+:root {
+  --deep-taupe: #815e5bff;
+  --liver: #685155ff;
+  --rhythm: #7a6f9bff;
+  --purple-mountain-majesty: #8b85c1ff;
+  --lavender-blue: #d4cdf4ff;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+html{
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  min-height: 100%;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  height: 100%;
+  margin: 0;
+  background: linear-gradient(-45deg, #F553F5, #C251FC, #8355E6, #5155FC, #4985F2, #F553F5);
+  animation: gradient 15s ease infinite;
+  background-size: 200% 200%;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  color: white;
+  position:absolute;
+  top:0;
+  bottom:0;
+  left:0;
+  right:0;
+  overflow:hidden;
+  z-index:-1;
+}
+
+.background {
+  position:absolute;
+  top:0;
+  bottom:0;
+  left:0;
+  right:0;
+  overflow:hidden;
+  z-index:-1;
+}
+
+.Container {
+  text-align: center;
+  width: 80%;
+  margin: 0 auto;
+  animation-name: float-down;
+  animation-duration: .75s;
+}
+
+.Container a {
+  color: white;
+}
+
+header h1 {
+  animation-name: float-down;
+  animation-duration: 1s;
+  text-align: center;
+}
+
+header hr {
+  animation-name: float-down;
+  animation-duration: .75s;
+  animation: hr-grow-out .5s ease-out;
+  background-color: white;
+  color: white;
+  border-width: 0;
+  height: 4px;
+  width: 80%;
+}
+
+header a {
+  color: white;
+  text-decoration: none;
+  padding: 4px;
+  border: transparent 4px solid;
+}
+
+header a:hover {
+  border-color: white;
+}
+
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+
+@keyframes float-down {
+  0% { transform: translate(0, -30px);}
+  100% {transform: translate(0, 0px);}
+}
+
+@keyframes hr-grow-out {
+  0% { width: 0%; }
+  100% { width: 80%; }
 }
