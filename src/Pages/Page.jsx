@@ -4,6 +4,7 @@ import Home from "./Home"
 import p404 from "./404"
 import About from "./About"
 import Socials from "./Socials"
+import './page.css';
 
 const Page = () => {
     return (

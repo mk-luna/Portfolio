@@ -13,6 +13,7 @@ const Home = () => {
                 <br />
                 links to these different areas.
             </p>
+            <section className="triangle"></section>
         </div>
     )
 }
